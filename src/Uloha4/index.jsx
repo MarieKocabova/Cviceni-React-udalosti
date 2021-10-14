@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // Zadání 1:
 // Dopiš komponentu `Pozdrav`, aby v tlačítku byl text
@@ -10,17 +10,27 @@ import React from 'react'
 // „Ahoj DOPLŇ_JMÉNO_V_PÁTÉM_PÁDĚ“.
 // Např. po kliknutí se zobrazí alert: Ahoj Luďku
 
-
 const Pozdrav = ({ jmenoVeCtvrtemPade, jmenoVPatemPade }) => {
-	return <button>@TODO</button>
-}
+  const handleOnclick = () => {
+    alert(`Ahoj ${jmenoVPatemPade}`);
+  };
+
+  return <button onClick={handleOnclick}>{`Pozdrav ${jmenoVeCtvrtemPade}`}</button>;
+};
 
 // Zadání 3:
 // Do komponenty `Uloha4` přidej ještě dvě použití komponenty `Pozdrav`.
 // Jednou s tvým jménem a jednou se jménem kouče.
 
 const Uloha4 = () => {
-	return <Pozdrav jmenoVeCtvrtemPade="Luďka" jmenoVPatemPade="Luďku" />
-}
+  return (
+    <>
+      {" "}
+      <Pozdrav jmenoVeCtvrtemPade="Luďka" jmenoVPatemPade="Luďku" />
+      <Pozdrav jmenoVeCtvrtemPade="Markétu" jmenoVPatemPade="Markéto" />
+      <Pozdrav jmenoVeCtvrtemPade="Tomáše" jmenoVPatemPade="Tomáši" />
+    </>
+  );
+};
 
 export default Uloha4;

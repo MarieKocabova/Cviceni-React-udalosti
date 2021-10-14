@@ -1,5 +1,5 @@
-import React from 'react'
-import hradUrl from './hrad.svg'
+import React from "react";
+import hradUrl from "./hrad.svg";
 
 // Zadání:
 // Po najetí myši  na obrázek (událost `onMouseEnter`)
@@ -7,7 +7,11 @@ import hradUrl from './hrad.svg'
 // Bublina = alert v prohlížeči.
 
 const Uloha2 = () => {
-	return <img src={hradUrl} width={60} height={60} alt="hrad" />
-}
+  const handleMouseenter = () => {
+    alert("Na hradě je myš");
+  };
+
+  return <img src={hradUrl} width={60} height={60} alt="hrad" onMouseEnter={handleMouseenter} />;
+};
 
 export default Uloha2;
